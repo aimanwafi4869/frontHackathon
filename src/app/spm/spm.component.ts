@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class SpmComponent {
 
+  click():void{
+    console.log('click')
+  }
 }
