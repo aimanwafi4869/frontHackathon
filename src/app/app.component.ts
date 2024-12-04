@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit, AfterViewInit{
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
   ngAfterViewInit(): void {
     throw new Error('Method not implemented.');

@@ -1,1 +1,533 @@
-<p>psychometric works!</p>
+<h1>Questionnaire for Our AI Project</h1>
+<p>Hello! We are conducting a project on AI where we are required to collect data to train our AI model. Please be sure that you are comfortable with us using your data.</p>
+
+<!-- Age Question -->
+<label for="age">Enter your age (required):</label><br>
+<input [(ngModel)]="age" type="number" id="age" name="age" required><br><br>
+
+<!-- Gender Question -->
+<label for="gender">Select your gender (required):</label><br>
+<input type="radio" id="male" name="gender" [value]="'male'"  [(ngModel)]="gender"  required>
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" [value]="'female'"  [(ngModel)]="gender"  required>
+<label for="female">Female</label><br><br>
+
+
+<!-- Education Level Question -->
+<label for="education">What is your highest education level? (Include ongoing study)
+    (required):</label><br>
+<input type="radio" id="education" name="education" [value]="'Foundation'" [(ngModel)]="education"  required>
+<label for="foundarion">Foundation/Matriculation/A-Level</label><br>
+<input type="radio" id="education" name="education" [value]="'STPM'" [(ngModel)]="education"  required>
+<label for="stpm">STPM</label><br>
+<input type="radio" id="education" name="education" [value]="'diploma'" [(ngModel)]="education"  required>
+<label for="dip">Diploma</label><br>
+<input type="radio" id="education" name="education" [value]="'degree'" [(ngModel)]="education"  required>
+<label for="degree">Bachelor's Degree</label><br>
+<input type="radio" id="education" name="education" [value]="'postgraduate'" [(ngModel)]="education"  required>
+<label for="postgraduate">Postgraduate Studies</label><br><br><br>
+
+
+<!-- Education Level Question
+<label for="education">What is your highest education level? (Include ongoing study, required):</label><br>
+<select id="education" name="education" required>
+    <option value="foundation">Foundation/Matriculation/A-level</option>
+    <option value="stpm">STPM</option>
+    <option value="diploma">Diploma</option>
+    <option value="degree">Bachelor's degree</option>
+    <option value="postgraduate">Postgraduate Studies</option>
+</select><br><br> -->
+
+
+<!-- SPM Result -->
+<label for="result">Fill in the subjects that you took during SPM only.</label><br><br>
+    
+<!-- Bahasa Melayu -->
+<label for="result">Bahasa Melayu:</label>&nbsp;
+<select id="result" name="bahasa_melayu" [value]="'bahasa_melayu'" [(ngModel)]="result.bm"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Bahasa Inggeris -->
+<label for="result">Bahasa Ingggeris:</label>&nbsp;
+<select id="result" name="bahasa_inggeris" [value]="'bahasa_inggeris'" [(ngModel)]="result.bi"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Mathematics -->
+<label for="result">Mathematics:</label>&nbsp;
+<select id="result" name="bahasa_melayu" [value]="'mathematics'" [(ngModel)]="result.maths"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Sejarah -->
+<label for="result">Sejarah:</label>&nbsp;
+<select id="result" name="sejarah" [value]="'sejarah'" [(ngModel)]="result.sej"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Science -->
+<label for="result">Science:</label>&nbsp;
+<select id="result" name="science" [value]="'science'" [(ngModel)]="result.science"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Pendidikan Islam -->
+<label for="result">Pendidikan Islam:</label>&nbsp;
+<select id="result" name="pendidikan islam" [value]="'pendidikan islam'" [(ngModel)]="result.pi"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Pendidikan Moral -->
+<label for="result">Pendidikan Moral:</label>&nbsp;
+<select id="result" name="pendidikan moral" [value]="'pendidikan moral'" [(ngModel)]="result.pm"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Additional Mathematics -->
+<label for="result">Additional Mathematics:</label>&nbsp;
+<select id="result" name="additional mathematics" [value]="'additional mathematics'" [(ngModel)]="result.addmath"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Physics -->
+<label for="result">Physics:</label>&nbsp;
+<select id="result" name="physics" [value]="'physics'" [(ngModel)]="result.physics"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Chemistry -->
+<label for="result">Chemistry:</label>&nbsp;
+<select id="result" name="chemistry" [value]="'chemistry'" [(ngModel)]="result.chemistry"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Biology -->
+<label for="result">Biology:</label>&nbsp;
+<select id="result" name="biology" [value]="'biology'" [(ngModel)]="result.biology"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Computer Science -->
+<label for="result">Computer Scienc:</label>&nbsp;
+<select id="result" name="computer science" [value]="'computer science'" [(ngModel)]="result.cs"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Prinsip Perakaunan -->
+<label for="result">Prinsip Perakaunan:</label>&nbsp;
+<select id="result" name="prinsip perakaunan" [value]="'prinsip perakaunan'" [(ngModel)]="result.akaun"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Ekonomi -->
+<label for="result">Ekonomi:</label>&nbsp;
+<select id="result" name="ekonomi" [value]="'ekonomi'" [(ngModel)]="result.eko"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Perniagaan -->
+<label for="result">Perniagaan:</label>&nbsp;
+<select id="result" name="perniagaan" [value]="'perniagaan'" [(ngModel)]="result.perniagaan"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Geography -->
+<label for="result">Geography:</label>&nbsp;
+<select id="result" name="geography" [value]="'geography'" [(ngModel)]="result.geo"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Sains Sukan -->
+<label for="result">Sains Sukan:</label>&nbsp;
+<select id="result" name="sains sukan" [value]="'sains sukan'" [(ngModel)]="result.sainssukan"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br>
+
+<!-- Pendidikan Seni Visual -->
+<label for="result">Pendidikan Seni Visual:</label>&nbsp;
+<select id="result" name="pendidikan seni visual" [value]="'pendidikan seni visual'" [(ngModel)]="result.psv"><br>
+    <option value="undefined" selected disabled>Select grade</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="G">G</option>
+</select><br><br><br><br><br>
+
+<h1>Personality Test</h1>
+<p>Part 1</p>
+
+<!-- Personality Test -->
+<label for="personality">1. I can easily talk to people about how I feel.</label><br>
+<input type="radio"  name="dm1" [value]="-1" [(ngModel)]="boolean.bool1[0]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="dm1" [value]="0" [(ngModel)]="boolean.bool1[0]"  >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">2. If something goes wrong it preys on my mind.</label><br>
+<input type="radio"  name="dm5" [value]="2" [(ngModel)]="boolean.bool5[0]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="dm5" [value]="0" [(ngModel)]="boolean.bool5[0]" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">3. I like things to be neat and tidy.</label><br>
+<input type="radio"  name="dm4" [value]="-2" [(ngModel)]="boolean.bool4[0]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="dm4" [value]="0" [(ngModel)]="boolean.bool4[0]" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">4. I'm good at listening to other people's problems.</label><br>
+<input type="radio"  name="dm2" [value]="2" [(ngModel)]="boolean.bool2[0]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="dm2" [value]="0" [(ngModel)]="boolean.bool2[0]" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">5. I always use trial and error methods.</label><br>
+<input type="radio"  name="trait5" [value]="-2" [(ngModel)]="boolean.bool3[0]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="trait5" [value]="0" [(ngModel)]="boolean.bool3[0]" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">6. I like to have plenty of time to myself.</label><br>
+<input type="radio"  name="trait6" [value]="2" [(ngModel)]="boolean.bool1[1]" >
+<label for="true">TRUE</label><br>
+<input type="radio"  name="trait6" [value]="0" [(ngModel)]="boolean.bool1[1]" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">7. If people are rude to me I just shrug it off.</label><br> 
+<input type="radio" id="dm"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="dm"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">8. I can work even when things are not organised.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">9. I'm a competitive person.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">10. I like to have lots of variety in what I do.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">11. I enjoy talking to people at social gatherings.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">12. I always feel hurt if someone criticises me.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">13. I have a systematic way of doing most things.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">14. I tend to trust other people.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">15. I am a practical minded person.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">16. I always tell white lies (unimportant lies).</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">17. I'm more of a listener than a talker.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">18. I rarely suffer from feelings of stress.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">19. It's better to get a job done than aim for perfection.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">20. I like to be in charge  of other people.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br><br><br><br> 
+
+<p>Part 2</p>
+
+<label for="personality">1. I like coming up with new ideas.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">2. I am happy to make speeches in public.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">3. Sometimes little things really upset me.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool" >
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool" >
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">4. I always tell people exactly what I think.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">5. I like to have a daily routine.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">6. People often thank me for my support.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">7. I like to work within the rules.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">8. I feel uneasy if I'm the centre of attention.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">9. I am cool-headed when under pressure.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">10. I never worry about a bit of untidiness.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">11. I often lose my patience with other people.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">12. None of my close friends has ever upset me.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">13. I like to know how things work.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">14. I enjoy socialising with large groups of people.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">15. After a hard day I find it difficult to unwind.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">16. If I say I will do something, I always do it.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">17. I worry when people are unhappy.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">18. People describe me as having good common sense.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">19. I prefer to talk to people on a one-to-one basis.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">20. I can't remember ever being late for an appointment.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">21. I keep going no matter what happens.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">22. Sometimes you have to break the rules.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">23. I'm good at getting people do things.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br>
+
+<label for="personality">24. My ideas are not always practical.</label><br>
+<input type="radio" id="true"  [value]="true"  [(ngModel)]="boolean.bool">
+<label for="true">TRUE</label><br>
+<input type="radio" id="false"  [value]="false"  [(ngModel)]="boolean.bool">
+<label for="false">FALSE</label><br><br> 
+
+
+<button (click)="submit()">Submit</button>
+       
