@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,7 +10,11 @@ import { Component } from '@angular/core';
 })
 export class SpmComponent {
 
+  constructor(protected http:HttpClient){}
   click():void{
     console.log('click+')
+    const req = this.http.get<any>('/api/ai/sklearn/accuracy');
+    const resp = req.subscribe()
+    console.log(resp)
   }
 }

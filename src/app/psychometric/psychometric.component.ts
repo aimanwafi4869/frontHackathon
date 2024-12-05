@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -48,6 +49,9 @@ export class PsychometricComponent {
     'sainssukan': undefined,
     'psv': undefined
   }
+
+  constructor(protected http: HttpClient){}
+
   submit(): void{
     console.log(this.age)
     console.log(this.gender)
@@ -65,6 +69,14 @@ export class PsychometricComponent {
   }
   extrovert(e:any ,value: number): void{
     this.dimension[1] -= value
+  }
 
+  predict():void{
+    const data = {"param":[[1,0,1,1,0,3,2,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0]]}
+    const req = this.http.post<any>('/api/ai/sklearn/predict',data,{
+      headers: {'Content-Type':'application/json; charset=utf-8'}
+    });
+    const resp = req.subscribe()
+    console.log(resp)
   }
 }

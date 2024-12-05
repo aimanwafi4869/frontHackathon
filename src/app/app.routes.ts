@@ -6,7 +6,8 @@ export const routes: Routes = [
     {
         path: 'spm', component: SpmComponent
     }, 
-    {path: 'psh', component: PsychometricComponent
+    {
+        path: 'psh', component: PsychometricComponent
 
     }
 ];
